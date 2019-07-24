@@ -13,7 +13,7 @@ public class Launcher extends io.vertx.core.Launcher {
   @Override
   public void beforeStartingVertx(final VertxOptions options) {
     final MetricsOptions metricsOptions = new MicrometerMetricsOptions()
-//      .setJvmMetricsEnabled(true)
+      .setJvmMetricsEnabled(true)
       .setRegistryName("my-registry")
       .setMicrometerRegistry(new SimpleMeterRegistry())
       .setEnabled(true);
